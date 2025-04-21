@@ -1,0 +1,24 @@
+<div class="background">
+  <div class="acc">
+    <nav>
+      <ul>
+        <div class="image-con"><img class="logo" src="assets/img/nas.png" /></div>
+        <li>Home</li>
+        <li>Transfers</li>
+        <li>Account Enquiry</li>
+        <li><a (click)="logout()">LogOut</a></li>
+      </ul>
+    </nav>
+    <div class="body">
+      <div class="search">
+        <input />
+      </div>
+      <div class="others">
+        <h2>Welcome back{{ userName ? ", " + userName : "" }}!</h2>
+        <div class="stuff">
+          <p>Transactional Data</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

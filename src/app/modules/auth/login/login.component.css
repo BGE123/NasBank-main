@@ -1,0 +1,77 @@
+.html {
+  height: 100vh;
+  display: flex;
+}
+form {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.big-img {
+  width: 50vw;
+}
+.form-con {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.inp {
+  display: flex;
+  flex-direction: column;
+}
+.forgot {
+  text-align: right;
+  color: #4bbb7d;
+}
+.img-con {
+  width: 5rem;
+}
+.img-con > img {
+  width: 100%;
+}
+h1 {
+  width: 35%;
+  color: #5ec576;
+  font-size: 35px;
+}
+input {
+  padding: 0.9rem;
+  border-radius: 6px;
+  border: 1px solid #c2c3c5;
+  background: none;
+}
+.p {
+  font-size: 12px;
+  font-weight: 700;
+  color: black;
+}
+button {
+  padding: 0.9rem;
+  border-radius: 6px;
+  background-color: #5ec576;
+  border: 0;
+  color: white;
+}
+a {
+  color: #4bbb7d;
+}
+a,
+button {
+  cursor: pointer;
+}
+.no-acc {
+  text-align: center;
+}
+.err {
+  position: fixed;
+  top: 2%;
+  right: 1%;
+  background-color: red;
+  color: white;
+  padding: 1.5rem;
+  font-size: 15px;
+  width: 20%;
+}

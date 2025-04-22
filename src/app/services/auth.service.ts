@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
+import 'firebase/compat/auth';
 import { User } from 'firebase/auth';
 
 @Injectable({
@@ -27,5 +28,19 @@ export class AuthService {
       if (!user) throw new Error('No logged-in user to update');
       return user.updateProfile(data);
     });
+  }
+
+  sendPhoneVerification(
+    phoneNumber: string,
+    recaptchaVerifier: firebase.default.auth.RecaptchaVerifier
+  ) {
+    return this.afAuth.signInWithPhoneNumber(phoneNumber, recaptchaVerifier);
+  }
+
+  confirmPhoneCode(
+    confirmationResult: firebase.default.auth.ConfirmationResult,
+    code: string
+  ) {
+    return confirmationResult.confirm(code);
   }
 }

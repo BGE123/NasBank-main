@@ -1,0 +1,11 @@
+<section class="section section--sign-up">
+  <div class="section__title">
+    <h3 class="section__header">
+      The best day to join Nas Bank was yesterday. The second best is today!
+    </h3>
+  </div>
+  <button class="btn btn--show-modal" (click)="openModal()">
+    Open your free account today!
+  </button>
+</section>
+<app-modal [isOpen]="isModalOpen" (close)="closeModal()"></app-modal>

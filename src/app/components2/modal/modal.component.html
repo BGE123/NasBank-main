@@ -1,0 +1,23 @@
+<div class="overlay" *ngIf="isOpen" (click)="onClose()" @fadeInOut></div>
+
+<div class="modal" *ngIf="isOpen" @fadeInOut>
+  <button class="btn--close-modal" (click)="onClose()">&times;</button>
+  <h2 class="modal__header">
+    Open your bank account<br />
+    in just <span class="highlight">5 minutes</span>
+  </h2>
+  <form class="modal__form" (ngSubmit)="onSignup()">
+    <label>First Name</label>
+    <input type="text" [(ngModel)]="name" name="name" />
+    <label>Last Name</label>
+    <input type="text" />
+    <label>Email Address</label>
+    <input type="email" [(ngModel)]="email" name="email" required />
+    <label>Password</label>
+    <input [(ngModel)]="password" name="pass" type="password" required />
+    <label>Phone Numebr</label>
+    <input [(ngModel)]="number" name="num" type="tel" required />
+    <button class="btn">Next step &rarr;</button>
+  </form>
+  <p class="err" *ngIf="error">{{ error }}</p>
+</div>

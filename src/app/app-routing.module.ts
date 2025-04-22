@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './modules/auth/login/login.component';
-import { DashboardComponent } from './modules/dashboard/dashboard.component';
+import { DashboardModule } from './modules/dashboard/dashboard.module';
 import { HomeComponent } from './modules/dashboard/pages/home/home.component';
 import { ProfileComponent } from './modules/dashboard/profile/profile.component';
 import { AuthModule } from './modules/auth/auth.module';
-import { LandingModule } from './modules/landing/landing.module';
 import { SignUpComponent } from './modules/auth/sign-up/sign-up.component';
+import { DashboardComponent } from './modules/dashboard/dashboard.component';
 
 const routes: Routes = [
   {
@@ -32,7 +32,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes), AuthModule, LandingModule],
+  imports: [RouterModule.forRoot(routes), AuthModule, DashboardModule],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

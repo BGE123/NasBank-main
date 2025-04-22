@@ -28,7 +28,12 @@ export class HomeComponent implements OnInit {
   logout() {
     this.auth
       .signOut()
-      .then(() => this.router.navigate(['/login']))
+      .then(() => this.router.navigate(['/']))
       .catch((err) => console.error('Logout error', err));
+  }
+  activeTab = 0;
+
+  setActiveTab(index: number) {
+    this.activeTab = index;
   }
 }

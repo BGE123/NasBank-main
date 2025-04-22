@@ -1,0 +1,60 @@
+<header class="header" #headerRef (document:keydown)="onKeydownEscape($event)">
+  <nav
+    #navEl
+    class="nav"
+    (mouseover)="handleHover($event, 0.5)"
+    (mouseout)="handleHover($event, 1)"
+  >
+    <img
+      src="assets/img/nas.png"
+      alt="Nas Bank logo"
+      class="nav__logo"
+      id="logo"
+      data-version-number="3.0"
+    />
+    <ul class="nav__links">
+      <li class="nav__item">
+        <a class="nav__link" href="#section--1">Features</a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" href="#section--2">Operations</a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" href="#section--3">Testimonials</a>
+      </li>
+      <li class="nav__item">
+        <a
+          class="nav__link nav__link--btn btn--show-modal"
+          href="#"
+          (click)="openModal($event)"
+          >Open account</a
+        >
+      </li>
+      <li class="nav__item">
+        <a
+          class="nav__link nav__link--btn btn--show-modal"
+          href="#"
+          (click)="openModalLog($event)"
+          >Log In</a
+        >
+      </li>
+    </ul>
+  </nav>
+
+  <div class="header__title">
+    <!-- <h1 oneclick ="alert('i miss you')"> -->
+    <h1>
+      When
+      <!-- Green highlight effect -->
+      <span class="highlight">banking</span>
+      meets<br />
+      <span class="highlight">Technology</span>
+    </h1>
+    <h4>A simpler banking experience for a simpler life.</h4>
+    <button class="btn--text btn--scroll-to">Learn more &DownArrow;</button>
+    <img src="assets/img/hero.jpg" class="header__img" alt="nax intro" />s
+  </div>
+</header>
+
+<app-modal [isOpen]="isModalOpen" (close)="closeModal()"></app-modal>
+<app-modal2 [isOpen]="isModalLogOpen" (close)="closeModalLog()"></app-modal2>
